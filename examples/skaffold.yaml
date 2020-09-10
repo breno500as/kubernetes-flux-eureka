@@ -1,0 +1,9 @@
+apiVersion: skaffold/v1
+kind: Config
+build:
+  artifacts:
+  - image: breno500as/sca-eureka-service
+deploy:
+  kubectl:
+    manifests:
+      - sca-eureka-*

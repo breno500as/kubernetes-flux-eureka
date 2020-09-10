@@ -1,0 +1,21 @@
+# An Ingress with 2 hosts and 3 endpoints
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: sca-eureka-ingress
+spec:   #para testar o ingress: minikube ip
+  rules: #curl 172.17.0.2 -H 'Host: sca-eureka.com'
+  - host: sca-eureka.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: deployment-sca-eureka
+          servicePort: 8761
+  # - host: helloworld-v2.example.com
+  #  http:
+  #    paths:
+  #    - path: /
+  #      backend:
+  #        serviceName: helloworld-v2
+  #        servicePort: 80
