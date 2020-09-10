@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
        - name: sca-eureka
-         image: breno500as/sca-eureka:1.0.0
+         image: breno500as/sca-eureka:1.0.2
          ports:
          - name: sca-eureka-port
            containerPort: 8761
